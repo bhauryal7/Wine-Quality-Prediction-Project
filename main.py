@@ -2,7 +2,7 @@ from src.DS_Project import logger
 from src.DS_Project.pipeline.data_ingestion import DataIngestionTrainingPipeline
 from src.DS_Project.pipeline.data_validation import DataValidationTrainingPipeline
 from src.DS_Project.pipeline.data_transformation import DataTransformationTrainingPipeline
-
+from src.DS_Project.pipeline.model_trainer import ModelTrainingPipeline
 
 STAGE_NAME="Data Ingestion Stage"
 try:
@@ -34,3 +34,16 @@ try:
 except Exception as e:
         logger.exception(e)
         raise e 
+
+
+STAGE_NAME="Model Training Stage"
+try:
+        logger.info(f">>>>> stage {STAGE_NAME} started <<<<<<")
+        obj = ModelTrainingPipeline()
+        obj.initiate_model_training()
+        logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<\n\nx=======x")
+except Exception as e:
+        logger.exception(e)
+        raise e 
+
+

@@ -2,7 +2,7 @@ import os
 from src.DS_Project import logger
 import pandas as pd
 
-from src.DS_Project.entity.config_entity import (DataValidationConfig)
+from src.DS_Project.entity.config_entity import DataValidationConfig
 
 class DataValidation:
     def __init__(self, config: DataValidationConfig):
