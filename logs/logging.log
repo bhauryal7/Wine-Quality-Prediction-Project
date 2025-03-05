@@ -543,3 +543,715 @@ x=======x]
 [2025-03-04 15:59:32,016: INFO: main: >>>>>> stage Model Training Stage completed <<<<<
 
 x=======x]
+[2025-03-05 14:15:57,409: INFO: main: >>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-03-05 14:15:57,414: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:15:57,418: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:15:57,422: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:15:57,422: INFO: common: created directory at: artifacts]
+[2025-03-05 14:15:57,422: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-03-05 14:15:57,422: INFO: data_ingestion: File already exists]
+[2025-03-05 14:15:57,430: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:15:57,430: INFO: main: >>>>> stage Data Validation Stage started <<<<<<]
+[2025-03-05 14:15:57,433: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:15:57,434: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:15:57,436: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:15:57,437: INFO: common: created directory at: artifacts]
+[2025-03-05 14:15:57,437: INFO: common: created directory at: artifacts/data_validation]
+[2025-03-05 14:15:57,452: INFO: main: >>>>>> stage Data Validation Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:15:57,452: INFO: main: >>>>> stage Data Transformation Stage started <<<<<<]
+[2025-03-05 14:15:57,455: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:15:57,456: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:15:57,458: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:15:57,459: INFO: common: created directory at: artifacts]
+[2025-03-05 14:15:57,459: INFO: common: created directory at: artifacts/data_transformation]
+[2025-03-05 14:15:57,486: INFO: data_transformation: Splited data into training and test sets]
+[2025-03-05 14:15:57,486: INFO: data_transformation: (1199, 12)]
+[2025-03-05 14:15:57,486: INFO: data_transformation: (400, 12)]
+[2025-03-05 14:15:57,486: INFO: main: >>>>>> stage Data Transformation Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:15:57,487: INFO: main: >>>>> stage Model Training Stage started <<<<<<]
+[2025-03-05 14:15:57,490: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:15:57,491: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:15:57,494: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:15:57,494: INFO: common: created directory at: artifacts]
+[2025-03-05 14:15:57,494: INFO: common: created directory at: artifacts/model_trainer]
+[2025-03-05 14:15:57,515: INFO: main: >>>>>> stage Model Training Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:15:57,515: INFO: main: >>>>> stage Model Evaluation Stage started <<<<<<]
+[2025-03-05 14:15:57,518: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:15:57,520: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:15:57,522: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:15:57,523: INFO: common: created directory at: artifacts]
+[2025-03-05 14:15:57,523: INFO: common: created directory at: artifacts/model_trainer]
+[2025-03-05 14:15:57,523: ERROR: main: "'ConfigBox' object has no attribute 'model_path'"]
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/neerajbhauryal/Desktop/ML projects/DS-Project/main.py", line 54, in <module>
+    obj.initiate_model_evaluation()
+  File "/Users/neerajbhauryal/Desktop/ML projects/DS-Project/src/DS_Project/pipeline/model_evaluation.py", line 13, in initiate_model_evaluation
+    model_evaluation_config = config.get_model_evaluation_config()
+  File "/Users/neerajbhauryal/Desktop/ML projects/DS-Project/src/DS_Project/config/configuration.py", line 81, in get_model_evaluation_config
+    model_path = config.model_path,
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_path'"
+[2025-03-05 14:18:12,015: INFO: main: >>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-03-05 14:18:12,018: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:18:12,019: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:18:12,020: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:18:12,020: INFO: common: created directory at: artifacts]
+[2025-03-05 14:18:12,020: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-03-05 14:18:12,021: INFO: data_ingestion: File already exists]
+[2025-03-05 14:18:12,023: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:18:12,023: INFO: main: >>>>> stage Data Validation Stage started <<<<<<]
+[2025-03-05 14:18:12,027: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:18:12,028: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:18:12,029: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:18:12,030: INFO: common: created directory at: artifacts]
+[2025-03-05 14:18:12,030: INFO: common: created directory at: artifacts/data_validation]
+[2025-03-05 14:18:12,039: INFO: main: >>>>>> stage Data Validation Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:18:12,040: INFO: main: >>>>> stage Data Transformation Stage started <<<<<<]
+[2025-03-05 14:18:12,043: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:18:12,044: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:18:12,047: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:18:12,047: INFO: common: created directory at: artifacts]
+[2025-03-05 14:18:12,047: INFO: common: created directory at: artifacts/data_transformation]
+[2025-03-05 14:18:12,065: INFO: data_transformation: Splited data into training and test sets]
+[2025-03-05 14:18:12,065: INFO: data_transformation: (1199, 12)]
+[2025-03-05 14:18:12,065: INFO: data_transformation: (400, 12)]
+[2025-03-05 14:18:12,065: INFO: main: >>>>>> stage Data Transformation Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:18:12,065: INFO: main: >>>>> stage Model Training Stage started <<<<<<]
+[2025-03-05 14:18:12,067: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:18:12,068: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:18:12,070: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:18:12,070: INFO: common: created directory at: artifacts]
+[2025-03-05 14:18:12,070: INFO: common: created directory at: artifacts/model_trainer]
+[2025-03-05 14:18:12,082: INFO: main: >>>>>> stage Model Training Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:18:12,082: INFO: main: >>>>> stage Model Evaluation Stage started <<<<<<]
+[2025-03-05 14:18:12,085: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:18:12,086: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:18:12,087: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:18:12,088: INFO: common: created directory at: artifacts]
+[2025-03-05 14:18:12,088: INFO: common: created directory at: artifacts/model_trainer]
+[2025-03-05 14:18:12,088: ERROR: main: "'ConfigBox' object has no attribute 'model_path'"]
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/neerajbhauryal/Desktop/ML projects/DS-Project/main.py", line 54, in <module>
+    obj.initiate_model_evaluation()
+  File "/Users/neerajbhauryal/Desktop/ML projects/DS-Project/src/DS_Project/pipeline/model_evaluation.py", line 13, in initiate_model_evaluation
+    model_evaluation_config = config.get_model_evaluation_config()
+  File "/Users/neerajbhauryal/Desktop/ML projects/DS-Project/src/DS_Project/config/configuration.py", line 81, in get_model_evaluation_config
+    model_path = config.model_path,
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_path'"
+[2025-03-05 14:30:36,172: INFO: main: >>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-03-05 14:30:36,181: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:30:36,185: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:30:36,189: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:30:36,190: INFO: common: created directory at: artifacts]
+[2025-03-05 14:30:36,190: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-03-05 14:30:36,190: INFO: data_ingestion: File already exists]
+[2025-03-05 14:30:36,196: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:30:36,196: INFO: main: >>>>> stage Data Validation Stage started <<<<<<]
+[2025-03-05 14:30:36,200: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:30:36,202: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:30:36,205: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:30:36,205: INFO: common: created directory at: artifacts]
+[2025-03-05 14:30:36,205: INFO: common: created directory at: artifacts/data_validation]
+[2025-03-05 14:30:36,223: INFO: main: >>>>>> stage Data Validation Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:30:36,224: INFO: main: >>>>> stage Data Transformation Stage started <<<<<<]
+[2025-03-05 14:30:36,226: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:30:36,227: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:30:36,228: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:30:36,228: INFO: common: created directory at: artifacts]
+[2025-03-05 14:30:36,229: INFO: common: created directory at: artifacts/data_transformation]
+[2025-03-05 14:30:36,255: INFO: data_transformation: Splited data into training and test sets]
+[2025-03-05 14:30:36,256: INFO: data_transformation: (1199, 12)]
+[2025-03-05 14:30:36,256: INFO: data_transformation: (400, 12)]
+[2025-03-05 14:30:36,256: INFO: main: >>>>>> stage Data Transformation Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:30:36,256: INFO: main: >>>>> stage Model Training Stage started <<<<<<]
+[2025-03-05 14:30:36,259: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:30:36,259: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:30:36,261: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:30:36,261: INFO: common: created directory at: artifacts]
+[2025-03-05 14:30:36,261: INFO: common: created directory at: artifacts/model_trainer]
+[2025-03-05 14:30:36,276: INFO: main: >>>>>> stage Model Training Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:30:36,276: INFO: main: >>>>> stage Model Evaluation Stage started <<<<<<]
+[2025-03-05 14:30:36,278: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:30:36,279: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:30:36,281: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:30:36,281: INFO: common: created directory at: artifacts]
+[2025-03-05 14:30:36,281: INFO: common: created directory at: artifacts/model_trainer]
+[2025-03-05 14:30:36,282: ERROR: main: "'ConfigBox' object has no attribute 'model_path'"]
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/neerajbhauryal/Desktop/ML projects/DS-Project/main.py", line 54, in <module>
+    obj.initiate_model_evaluation()
+  File "/Users/neerajbhauryal/Desktop/ML projects/DS-Project/src/DS_Project/pipeline/model_evaluation.py", line 13, in initiate_model_evaluation
+    model_evaluation_config = config.get_model_evaluation_config()
+  File "/Users/neerajbhauryal/Desktop/ML projects/DS-Project/src/DS_Project/config/configuration.py", line 81, in get_model_evaluation_config
+    model_path = config.model_path,
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_path'"
+[2025-03-05 14:32:12,194: INFO: main: >>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-03-05 14:32:12,197: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:32:12,198: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:32:12,201: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:32:12,202: INFO: common: created directory at: artifacts]
+[2025-03-05 14:32:12,202: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-03-05 14:32:12,202: INFO: data_ingestion: File already exists]
+[2025-03-05 14:32:12,204: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:32:12,204: INFO: main: >>>>> stage Data Validation Stage started <<<<<<]
+[2025-03-05 14:32:12,207: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:32:12,208: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:32:12,210: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:32:12,211: INFO: common: created directory at: artifacts]
+[2025-03-05 14:32:12,211: INFO: common: created directory at: artifacts/data_validation]
+[2025-03-05 14:32:12,220: INFO: main: >>>>>> stage Data Validation Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:32:12,220: INFO: main: >>>>> stage Data Transformation Stage started <<<<<<]
+[2025-03-05 14:32:12,224: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:32:12,225: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:32:12,228: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:32:12,229: INFO: common: created directory at: artifacts]
+[2025-03-05 14:32:12,229: INFO: common: created directory at: artifacts/data_transformation]
+[2025-03-05 14:32:12,250: INFO: data_transformation: Splited data into training and test sets]
+[2025-03-05 14:32:12,250: INFO: data_transformation: (1199, 12)]
+[2025-03-05 14:32:12,250: INFO: data_transformation: (400, 12)]
+[2025-03-05 14:32:12,250: INFO: main: >>>>>> stage Data Transformation Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:32:12,250: INFO: main: >>>>> stage Model Training Stage started <<<<<<]
+[2025-03-05 14:32:12,253: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:32:12,254: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:32:12,257: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:32:12,257: INFO: common: created directory at: artifacts]
+[2025-03-05 14:32:12,258: INFO: common: created directory at: artifacts/model_trainer]
+[2025-03-05 14:32:12,273: INFO: main: >>>>>> stage Model Training Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:32:12,273: INFO: main: >>>>> stage Model Evaluation Stage started <<<<<<]
+[2025-03-05 14:32:12,276: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:32:12,278: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:32:12,281: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:32:12,281: INFO: common: created directory at: artifacts]
+[2025-03-05 14:32:12,282: INFO: common: created directory at: artifacts/model_trainer]
+[2025-03-05 14:32:12,282: ERROR: main: "'ConfigBox' object has no attribute 'model_path'"]
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/neerajbhauryal/Desktop/ML projects/DS-Project/main.py", line 54, in <module>
+    obj.initiate_model_evaluation()
+  File "/Users/neerajbhauryal/Desktop/ML projects/DS-Project/src/DS_Project/pipeline/model_evaluation.py", line 13, in initiate_model_evaluation
+    model_evaluation_config = config.get_model_evaluation_config()
+  File "/Users/neerajbhauryal/Desktop/ML projects/DS-Project/src/DS_Project/config/configuration.py", line 81, in get_model_evaluation_config
+    model_path = config.model_path,
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_path'"
+[2025-03-05 14:35:47,487: INFO: main: >>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-03-05 14:35:47,491: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:35:47,497: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:35:47,501: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:35:47,502: INFO: common: created directory at: artifacts]
+[2025-03-05 14:35:47,502: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-03-05 14:35:47,502: INFO: data_ingestion: File already exists]
+[2025-03-05 14:35:47,508: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:35:47,508: INFO: main: >>>>> stage Data Validation Stage started <<<<<<]
+[2025-03-05 14:35:47,511: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:35:47,512: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:35:47,514: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:35:47,514: INFO: common: created directory at: artifacts]
+[2025-03-05 14:35:47,514: INFO: common: created directory at: artifacts/data_validation]
+[2025-03-05 14:35:47,534: INFO: main: >>>>>> stage Data Validation Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:35:47,534: INFO: main: >>>>> stage Data Transformation Stage started <<<<<<]
+[2025-03-05 14:35:47,537: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:35:47,538: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:35:47,540: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:35:47,540: INFO: common: created directory at: artifacts]
+[2025-03-05 14:35:47,541: INFO: common: created directory at: artifacts/data_transformation]
+[2025-03-05 14:35:47,571: INFO: data_transformation: Splited data into training and test sets]
+[2025-03-05 14:35:47,571: INFO: data_transformation: (1199, 12)]
+[2025-03-05 14:35:47,571: INFO: data_transformation: (400, 12)]
+[2025-03-05 14:35:47,571: INFO: main: >>>>>> stage Data Transformation Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:35:47,571: INFO: main: >>>>> stage Model Training Stage started <<<<<<]
+[2025-03-05 14:35:47,574: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:35:47,574: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:35:47,576: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:35:47,577: INFO: common: created directory at: artifacts]
+[2025-03-05 14:35:47,577: INFO: common: created directory at: artifacts/model_trainer]
+[2025-03-05 14:35:47,591: INFO: main: >>>>>> stage Model Training Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:35:47,591: INFO: main: >>>>> stage Model Evaluation Stage started <<<<<<]
+[2025-03-05 14:35:47,595: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:35:47,596: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:35:47,597: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:35:47,598: INFO: common: created directory at: artifacts]
+[2025-03-05 14:35:47,598: INFO: common: created directory at: artifacts/model_trainer]
+[2025-03-05 14:35:47,599: ERROR: main: "'ConfigBox' object has no attribute 'metric_file_name'"]
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'metric_file_name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'metric_file_name'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'metric_file_name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'metric_file_name'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'metric_file_name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'metric_file_name'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'metric_file_name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/neerajbhauryal/Desktop/ML projects/DS-Project/main.py", line 54, in <module>
+    obj.initiate_model_evaluation()
+  File "/Users/neerajbhauryal/Desktop/ML projects/DS-Project/src/DS_Project/pipeline/model_evaluation.py", line 13, in initiate_model_evaluation
+    model_evaluation_config = config.get_model_evaluation_config()
+  File "/Users/neerajbhauryal/Desktop/ML projects/DS-Project/src/DS_Project/config/configuration.py", line 83, in get_model_evaluation_config
+    metric_file_name= config.metric_file_name,
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'metric_file_name'"
+[2025-03-05 14:38:22,500: INFO: main: >>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-03-05 14:38:22,504: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:38:22,506: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:38:22,509: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:38:22,510: INFO: common: created directory at: artifacts]
+[2025-03-05 14:38:22,510: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-03-05 14:38:22,510: INFO: data_ingestion: File already exists]
+[2025-03-05 14:38:22,515: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:38:22,516: INFO: main: >>>>> stage Data Validation Stage started <<<<<<]
+[2025-03-05 14:38:22,518: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:38:22,519: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:38:22,521: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:38:22,521: INFO: common: created directory at: artifacts]
+[2025-03-05 14:38:22,521: INFO: common: created directory at: artifacts/data_validation]
+[2025-03-05 14:38:22,530: INFO: main: >>>>>> stage Data Validation Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:38:22,530: INFO: main: >>>>> stage Data Transformation Stage started <<<<<<]
+[2025-03-05 14:38:22,533: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:38:22,534: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:38:22,537: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:38:22,537: INFO: common: created directory at: artifacts]
+[2025-03-05 14:38:22,537: INFO: common: created directory at: artifacts/data_transformation]
+[2025-03-05 14:38:22,555: INFO: data_transformation: Splited data into training and test sets]
+[2025-03-05 14:38:22,555: INFO: data_transformation: (1199, 12)]
+[2025-03-05 14:38:22,555: INFO: data_transformation: (400, 12)]
+[2025-03-05 14:38:22,556: INFO: main: >>>>>> stage Data Transformation Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:38:22,556: INFO: main: >>>>> stage Model Training Stage started <<<<<<]
+[2025-03-05 14:38:22,559: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:38:22,559: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:38:22,561: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:38:22,561: INFO: common: created directory at: artifacts]
+[2025-03-05 14:38:22,561: INFO: common: created directory at: artifacts/model_trainer]
+[2025-03-05 14:38:22,572: INFO: main: >>>>>> stage Model Training Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:38:22,573: INFO: main: >>>>> stage Model Evaluation Stage started <<<<<<]
+[2025-03-05 14:38:22,575: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:38:22,576: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:38:22,578: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:38:22,578: INFO: common: created directory at: artifacts]
+[2025-03-05 14:38:22,578: INFO: common: created directory at: artifacts/model_trainer]
+[2025-03-05 14:38:22,578: ERROR: main: "'ConfigBox' object has no attribute 'metric_file_name'"]
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'metric_file_name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'metric_file_name'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'metric_file_name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'metric_file_name'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'metric_file_name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'metric_file_name'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'metric_file_name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/neerajbhauryal/Desktop/ML projects/DS-Project/main.py", line 54, in <module>
+    obj.initiate_model_evaluation()
+  File "/Users/neerajbhauryal/Desktop/ML projects/DS-Project/src/DS_Project/pipeline/model_evaluation.py", line 13, in initiate_model_evaluation
+    model_evaluation_config = config.get_model_evaluation_config()
+  File "/Users/neerajbhauryal/Desktop/ML projects/DS-Project/src/DS_Project/config/configuration.py", line 83, in get_model_evaluation_config
+    metric_file_name= config.metric_file_name,
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'metric_file_name'"
+[2025-03-05 14:44:14,345: INFO: main: >>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-03-05 14:44:14,348: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:44:14,349: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:44:14,351: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:44:14,351: INFO: common: created directory at: artifacts]
+[2025-03-05 14:44:14,351: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-03-05 14:44:14,351: INFO: data_ingestion: File already exists]
+[2025-03-05 14:44:14,353: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:44:14,353: INFO: main: >>>>> stage Data Validation Stage started <<<<<<]
+[2025-03-05 14:44:14,356: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:44:14,357: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:44:14,360: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:44:14,361: INFO: common: created directory at: artifacts]
+[2025-03-05 14:44:14,361: INFO: common: created directory at: artifacts/data_validation]
+[2025-03-05 14:44:14,372: INFO: main: >>>>>> stage Data Validation Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:44:14,372: INFO: main: >>>>> stage Data Transformation Stage started <<<<<<]
+[2025-03-05 14:44:14,375: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:44:14,375: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:44:14,378: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:44:14,378: INFO: common: created directory at: artifacts]
+[2025-03-05 14:44:14,378: INFO: common: created directory at: artifacts/data_transformation]
+[2025-03-05 14:44:14,396: INFO: data_transformation: Splited data into training and test sets]
+[2025-03-05 14:44:14,397: INFO: data_transformation: (1199, 12)]
+[2025-03-05 14:44:14,397: INFO: data_transformation: (400, 12)]
+[2025-03-05 14:44:14,397: INFO: main: >>>>>> stage Data Transformation Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:44:14,398: INFO: main: >>>>> stage Model Training Stage started <<<<<<]
+[2025-03-05 14:44:14,402: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:44:14,404: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:44:14,406: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:44:14,407: INFO: common: created directory at: artifacts]
+[2025-03-05 14:44:14,407: INFO: common: created directory at: artifacts/model_trainer]
+[2025-03-05 14:44:14,419: INFO: main: >>>>>> stage Model Training Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:44:14,419: INFO: main: >>>>> stage Model Evaluation Stage started <<<<<<]
+[2025-03-05 14:44:14,423: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:44:14,424: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:44:14,426: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:44:14,427: INFO: common: created directory at: artifacts]
+[2025-03-05 14:44:14,427: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-03-05 14:44:15,286: INFO: common: json file saved at: artifacts/model_evaluation/metrics.json]
+[2025-03-05 14:44:22,306: INFO: main: >>>>>> stage Model Evaluation Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:57:20,632: INFO: main: >>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-03-05 14:57:20,641: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:57:20,646: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:57:20,648: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:57:20,649: INFO: common: created directory at: artifacts]
+[2025-03-05 14:57:20,649: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-03-05 14:57:20,650: INFO: data_ingestion: File already exists]
+[2025-03-05 14:57:20,655: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:57:20,655: INFO: main: >>>>> stage Data Validation Stage started <<<<<<]
+[2025-03-05 14:57:20,658: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:57:20,659: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:57:20,661: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:57:20,661: INFO: common: created directory at: artifacts]
+[2025-03-05 14:57:20,661: INFO: common: created directory at: artifacts/data_validation]
+[2025-03-05 14:57:20,677: INFO: main: >>>>>> stage Data Validation Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:57:20,677: INFO: main: >>>>> stage Data Transformation Stage started <<<<<<]
+[2025-03-05 14:57:20,683: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:57:20,684: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:57:20,688: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:57:20,688: INFO: common: created directory at: artifacts]
+[2025-03-05 14:57:20,689: INFO: common: created directory at: artifacts/data_transformation]
+[2025-03-05 14:57:20,717: INFO: data_transformation: Splited data into training and test sets]
+[2025-03-05 14:57:20,717: INFO: data_transformation: (1199, 12)]
+[2025-03-05 14:57:20,718: INFO: data_transformation: (400, 12)]
+[2025-03-05 14:57:20,718: INFO: main: >>>>>> stage Data Transformation Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:57:20,718: INFO: main: >>>>> stage Model Training Stage started <<<<<<]
+[2025-03-05 14:57:20,723: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:57:20,724: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:57:20,727: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:57:20,727: INFO: common: created directory at: artifacts]
+[2025-03-05 14:57:20,727: INFO: common: created directory at: artifacts/model_trainer]
+[2025-03-05 14:57:20,748: INFO: main: >>>>>> stage Model Training Stage completed <<<<<
+
+x=======x]
+[2025-03-05 14:57:20,748: INFO: main: >>>>> stage Model Evaluation Stage started <<<<<<]
+[2025-03-05 14:57:20,751: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-03-05 14:57:20,752: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-05 14:57:20,754: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-03-05 14:57:20,755: INFO: common: created directory at: artifacts]
+[2025-03-05 14:57:20,755: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-03-05 14:57:21,942: INFO: common: json file saved at: artifacts/model_evaluation/metrics.json]
+[2025-03-05 14:57:32,253: INFO: main: >>>>>> stage Model Evaluation Stage completed <<<<<
+
+x=======x]

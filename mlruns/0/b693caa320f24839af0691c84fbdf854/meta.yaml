@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/neerajbhauryal/Desktop/ML%20projects/DS-Project/mlruns/0/b693caa320f24839af0691c84fbdf854/artifacts
+end_time: 1741182262300
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b693caa320f24839af0691c84fbdf854
+run_name: secretive-squid-234
+run_uuid: b693caa320f24839af0691c84fbdf854
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741182255258
+status: 3
+tags: []
+user_id: neerajbhauryal
