@@ -4,7 +4,7 @@ This project demonstrates an end-to-end **MLOps pipeline** for predicting wine q
 
 ---
 
-## 🔧 Overview
+## Overview
 
 - **Goal:** Predict wine quality based on physicochemical features using a structured MLOps workflow.
 - **Approach:** Modular code structure with reusable components for data processing, model training, and deployment.
@@ -13,19 +13,19 @@ This project demonstrates an end-to-end **MLOps pipeline** for predicting wine q
 
 ---
 
-## 🚀 Features
+## Features
 
-- ✅ Robust data preprocessing (handling missing values, scaling, encoding)
-- ✅ Feature engineering and feature selection
-- ✅ Elastic Net Regression for interpretable model training
-- ✅ Workflow modularization (pipelines for ingestion, transformation, training, evaluation)
-- ✅ Model evaluation and experiment tracking with **MLflow**
-- ✅ Model deployment using **Flask API**
-- ✅ Integration with **DVC** and **DagsHub** for pipeline reproducibility and collaboration
+- Robust data preprocessing (handling missing values, scaling, encoding)
+- Feature engineering and feature selection
+- Elastic Net Regression for interpretable model training
+- Workflow modularization (pipelines for ingestion, transformation, training, evaluation)
+- Model evaluation and experiment tracking with **MLflow**
+- Model deployment using **Flask API**
+- Integration with **DVC** and **DagsHub** for pipeline reproducibility and collaboration
 
 ---
 
-## 🔁 MLOps Workflow
+## MLOps Workflow
 
 1. **Data Ingestion**  
    Load raw data and store in version-controlled format.
@@ -50,7 +50,7 @@ This project demonstrates an end-to-end **MLOps pipeline** for predicting wine q
 
 ---
 
-## 📈 Future Improvements
+## Future Improvements
 
 - Add support for additional models (e.g., XGBoost, Random Forest, or neural networks).
 - Integrate CI/CD with GitHub Actions for automated testing and deployment.
@@ -60,6 +60,6 @@ This project demonstrates an end-to-end **MLOps pipeline** for predicting wine q
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License.
